@@ -1,0 +1,75 @@
+{
+  "name": "myVM2",
+  "id": "/subscriptions/0ea62a50-7130-4a99-920f-af4634666615/resourceGroups/lab/providers/Microsoft.Compute/virtualMachines/myVM2",
+  "type": "Microsoft.Compute/virtualMachines",
+  "location": "northeurope",
+  "properties": {
+    "vmId": "d7554857-ad05-48c9-b9b5-3cc0ca0f3ed2",
+    "hardwareProfile": {
+      "vmSize": "Standard_B2s"
+    },
+    "storageProfile": {
+      "imageReference": {
+        "publisher": "canonical",
+        "offer": "0001-com-ubuntu-server-focal",
+        "sku": "20_04-lts-gen2",
+        "version": "latest",
+        "exactVersion": "20.04.202210180"
+      },
+      "osDisk": {
+        "osType": "Linux",
+        "name": "myVM2_disk1_1596fa670ac74004922cd74485641ef8",
+        "createOption": "FromImage",
+        "caching": "ReadWrite",
+        "managedDisk": {
+          "storageAccountType": "Premium_LRS",
+          "id": "/subscriptions/0ea62a50-7130-4a99-920f-af4634666615/resourceGroups/lab/providers/Microsoft.Compute/disks/myVM2_disk1_1596fa670ac74004922cd74485641ef8"
+        },
+        "deleteOption": "Delete",
+        "diskSizeGB": 30
+      },
+      "dataDisks": []
+    },
+    "osProfile": {
+      "computerName": "myVM2",
+      "adminUsername": "azureuser",
+      "linuxConfiguration": {
+        "disablePasswordAuthentication": true,
+        "ssh": {
+          "publicKeys": [
+            {
+              "path": "/home/azureuser/.ssh/authorized_keys",
+              "keyData": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDRjo2UbK6hkctxHhrN80VTz3ZFtynMnl76QNjdxT4fgE8k0Y2oJr7bsfpBLUDG51GD6I3nY7poHR/vIkTgc3YxTaYmQelh4seJ4DQPvqtH0d75g4m4W7Qy+e/iJ4Dm2jncfZlQFIPG5Tuv6Prb52XTzapaVT44kNWD+ShlMy1KlnwbYzDzR0in96ndfFdvJuhGlIpehk5kdGsZj0DFjh284ef7523tNALEyA+YUy0Sn6jk5owwMscUbn5qNjGLFUe4xEfQ6UlOEy/Rv/iqoL9wrfgFqIFHXMaO0lyJlJ48Oqrv9bRFt4MCMlV6ayR44A3yIHV/l++htdPDLb0R2yjLf2B8V2SFwmfpUkQgQFF4QX24OCLlJ0u/NWpCOWQUwamLxf9a2TNRC8EOzjNutc99D54GrhC2c4Fdm+xNid/5ecvujZuOnYn44Gs2WZrI81yflB2nkyj5UH913M9wuIAztNvLked+h4To5X2MqN1jrGkYRLFozePhZQIDVm1IFo0= generated-by-azure"
+            }
+          ]
+        },
+        "provisionVMAgent": true,
+        "patchSettings": {
+          "patchMode": "ImageDefault",
+          "assessmentMode": "ImageDefault"
+        },
+        "enableVMAgentPlatformUpdates": false
+      },
+      "secrets": [],
+      "allowExtensionOperations": true,
+      "requireGuestProvisionSignal": true
+    },
+    "networkProfile": {
+      "networkInterfaces": [
+        {
+          "id": "/subscriptions/0ea62a50-7130-4a99-920f-af4634666615/resourceGroups/lab/providers/Microsoft.Network/networkInterfaces/myvm2179",
+          "properties": {
+            "deleteOption": "Detach"
+          }
+        }
+      ]
+    },
+    "diagnosticsProfile": {
+      "bootDiagnostics": {
+        "enabled": true
+      }
+    },
+    "provisioningState": "Succeeded",
+    "timeCreated": "2022-11-14T12:34:05.5256048+00:00"
+  }
+}
